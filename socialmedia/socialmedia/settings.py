@@ -55,9 +55,18 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'socialmedia.urls'
+### facebook app data
 SOCIAL_AUTH_FACEBOOK_KEY = '535137076975612'
 SOCIAL_AUTH_FACEBOOK_SECRET = 'baa600a95794da38cb2c16c99a23a3ab'
 SOCIAL_AUTH_REDIRECT_IS_HTTPS = True
+
+### linkedin app data
+SOCIAL_AUTH_LINKEDIN_OAUTH2_KEY = '784doh1hwe0cps'
+SOCIAL_AUTH_LINKEDIN_OAUTH2_SECRET = 'YiaV8pjq07rUlRuM'
+SOCIAL_AUTH_LINKEDIN_OAUTH2_SCOPE = ['r_basicprofile', 'r_emailaddress']
+SOCIAL_AUTH_LINKEDIN_OAUTH2_FIELD_SELECTORS = ['email-address', 'formatted-name', 'public-profile-url', 'picture-url']
+
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -77,6 +86,7 @@ TEMPLATES = [
 ]
 
 AUTHENTICATION_BACKENDS = (
+    'social_core.backends.linkedin.LinkedinOAuth2',
     'social_core.backends.facebook.FacebookOAuth2',
     'django.contrib.auth.backends.ModelBackend',
 )

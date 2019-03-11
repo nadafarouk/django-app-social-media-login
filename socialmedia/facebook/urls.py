@@ -19,8 +19,7 @@ from django.contrib.auth import views as auth
 
 urlpatterns = [
     url(r'^index$', views.login_page),
-    url(r'^user$', views.user_profile),
-    url(r'^login$', auth.login),
+    url(r'^login$', auth.login), # django login page
     url(r'^logout$', auth.logout),
     url(r'^', include('social_django.urls')),
 ]
