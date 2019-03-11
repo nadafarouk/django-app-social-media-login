@@ -22,5 +22,5 @@ urlpatterns = [
     url(r'^user$', views.user_profile),
     url(r'^login$', auth.login),
     url(r'^logout$', auth.logout),
-    url(r'^oauth', include('social_django.urls')),
+    url(r'^', include('social_django.urls')),
 ]

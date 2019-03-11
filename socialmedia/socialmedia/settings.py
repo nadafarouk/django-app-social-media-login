@@ -25,7 +25,9 @@ SECRET_KEY = 'y31p1nm-cij*(&*5-7l8b7cryjw-q!u^kfc3t4xijt1r&b&&g6'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['expono.serveo.net',
+                 'localhost',
+                 '127.0.0.1','propono.serveo.net','pateo.serveo.net']
 
 
 # Application definition
@@ -53,7 +55,9 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'socialmedia.urls'
-
+SOCIAL_AUTH_FACEBOOK_KEY = '535137076975612'
+SOCIAL_AUTH_FACEBOOK_SECRET = 'baa600a95794da38cb2c16c99a23a3ab'
+SOCIAL_AUTH_REDIRECT_IS_HTTPS = True
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -137,4 +141,4 @@ STATIC_URL = '/static/'
 
 LOGIN_URL = '/facebook/login'
 
-LOGIN_REDIRECT_URL='/facebook/user'
+LOGIN_REDIRECT_URL='/facebook/index'
