@@ -56,13 +56,13 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'socialmedia.urls'
 ### facebook app data
-SOCIAL_AUTH_FACEBOOK_KEY = '535137076975612'
-SOCIAL_AUTH_FACEBOOK_SECRET = 'baa600a95794da38cb2c16c99a23a3ab'
+SOCIAL_AUTH_FACEBOOK_KEY = ''
+SOCIAL_AUTH_FACEBOOK_SECRET = ''
 SOCIAL_AUTH_REDIRECT_IS_HTTPS = True
 
 ### linkedin app data
-SOCIAL_AUTH_LINKEDIN_OAUTH2_KEY = '784doh1hwe0cps'
-SOCIAL_AUTH_LINKEDIN_OAUTH2_SECRET = 'YiaV8pjq07rUlRuM'
+SOCIAL_AUTH_LINKEDIN_OAUTH2_KEY = ''
+SOCIAL_AUTH_LINKEDIN_OAUTH2_SECRET = ''
 SOCIAL_AUTH_LINKEDIN_OAUTH2_SCOPE = ['r_basicprofile', 'r_emailaddress']
 SOCIAL_AUTH_LINKEDIN_OAUTH2_FIELD_SELECTORS = ['email-address', 'formatted-name', 'public-profile-url', 'picture-url']
 
@@ -103,8 +103,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'socialmedia_db',
-        'USER':'root',
-        'PASSWORD':'P@$$w0rd_',
+        'USER':'',
+        'PASSWORD':'',
         'HOST':'127.0.0.1',
         'PORT':'3306'
 	}
